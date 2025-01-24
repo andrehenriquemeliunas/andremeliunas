@@ -244,3 +244,18 @@
     text-align: center;
     color: #6b728091;
   }
+
+  .projetos {
+    display: flex;
+    gap: 20px; /* Espaço entre os projetos */
+  }
+  
+  .projetos section {
+    flex: 1; /* Faz os projetos ocuparem o mesmo tamanho */
+    max-width: 50%; /* Limita a largura a 50% de cada projeto */
+  }
+  
+  .projetos iframe {
+    width: 90%; /* Faz o iframe ocupar toda a largura da seção */
+    height: 400px; /* Define a altura do iframe */
+  }
