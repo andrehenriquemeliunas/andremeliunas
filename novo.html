@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="stylenovo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <button id="theme-toggle" class="theme-toggle">Tema Escuro</button>
+    
+    <!-- Título e profissão -->
+    <header class="header">
+        <h1 id="nome">André Meliunas</h1>
+        <p id="profissao">Desenvolvedor de Chatbots</p>
+    </header>
+
+    <div class="container">
+        <div class="box large" id="sobre-mim">
+            <div class="content">
+                <h2>Sobre Mim</h2>
+            </div>
+        </div>
+        <div class="box medium" id="projetos-chatbots">
+            <div class="content">
+                <h2>Projetos Chatbots</h2>
+            </div>
+        </div>
+        <div class="box medium" id="experiencia-profissional">
+            <div class="content">
+                <h2>Experiência Profissional</h2>
+            </div>
+        </div>
+        <div class="box medium" id="habilidades">
+            <div class="content">
+                <h2>Habilidades</h2>
+            </div>
+        </div>
+        <div class="box medium" id="experiencia-academica">
+            <div class="content">
+                <h2>Experiência Acadêmica</h2>
+            </div>
+        </div>
+        <div class="box medium wide" id="contato"  onclick="openModal()">
+            <div class="content">
+                <h2>Contato</h2>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Contato</h2>
+            <h3>Está interessado em trabalhar comigo ou quer saber mais sobre os meus projetos?</h3>
+            <p><strong>Email:</strong> <a href="mailto:andremeliunas@gmail.com">andremeliunas@gmail.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/andrehenriquemeliunas" target="_blank">linkedin.com/in/andrehenriquemeliunas</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/andremeliunas" target="_blank">github.com/andremeliunas</a></p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 André Meliunas CNPJ: 52576710000168</p>
+    </footer>
+
+    <script src="scriptnovo.js"></script>
+</body>
+</html>
