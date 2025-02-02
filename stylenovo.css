@@ -94,19 +94,12 @@ body {
     align-items: center;
 }
 
-#projetos-chatbots:hover {
-    background: linear-gradient(135deg, #3e4a84, #1f152e, #3e4a84); /* Mudança de cor no hover */
-}
-
 #projetos-chatbots h2 {
     margin: 0;
     font-size: 24px;
     transition: text-decoration 0.3s ease; /* Transição suave para o sublinhado */
 }
 
-#projetos-chatbots:hover h2 {
-    text-decoration: underline; /* Sublinhado no texto */
-}
 
 #experiencia-profissional {
     background: linear-gradient(135deg, #897ABF, #7D468C, #302A59); 
@@ -213,7 +206,7 @@ body.light-theme .footer {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    background-color: rgba(0, 0, 0, 0.644); /* Fundo semitransparente */
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -240,7 +233,7 @@ body.light-theme .footer {
 }
 
 .modal a {
-    color: #56c3ee; /* Cor dourada para os links */
+    color: white;
     text-decoration: none;
     font-weight: bold;
 }
@@ -274,4 +267,136 @@ body.light-theme .modal-content {
 
 body.light-theme .modal a {
     color: #0077b5; /* Cor azul para links no tema claro */
+}
+
+/* Estilização da Linha do Tempo */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.timeline-icon {
+    font-size: 24px;
+}
+
+.timeline-content {
+    text-align: left;
+}
+
+/* Botões de Contato */
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    color: white;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 8px;
+    color: white;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Cores dos Botões */
+.email {
+    background-color: #d44638;
+    
+}
+
+.linkedin {
+    background-color: #0077b5;
+}
+
+.github {
+    background-color: #24292e;
+}
+
+/* Tema Claro */
+body.light-theme .modal-content {
+    background-color: #f4f4f4;
+    color: #111;
+}
+
+body.light-theme .contact-btn {
+    color: white;
+}
+
+body.light-theme .email {
+    background-color: #e57373;
+}
+
+body.light-theme .linkedin {
+    background-color: #0a66c2;
+}
+
+body.light-theme .github {
+    background-color: #333;
+}
+
+/* Lista de habilidades estilizada */
+.skills-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.skills-list li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 10px;
+}
+
+/* Ajuste para tema claro */
+body.light-theme .skills-list li {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* Modal de Sobre Mim */
+.about-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px;
+}
+
+body.light-theme .profile-pic {
+    border: 4px solid rgba(0, 0, 0, 0.2);
 }

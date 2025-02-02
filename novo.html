@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
+    <title>André Meliunas</title>
     <link rel="stylesheet" href="stylenovo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,31 +14,31 @@
     <!-- Título e profissão -->
     <header class="header">
         <h1 id="nome">André Meliunas</h1>
-        <p id="profissao">Desenvolvedor de Chatbots</p>
+        <p id="profissao">Desenvolvedor Chatbot e Analista de Sistemas</p>
     </header>
 
     <div class="container">
-        <div class="box large" id="sobre-mim">
+        <div class="box large" id="sobre-mim" onclick="openAboutModal()">
             <div class="content">
                 <h2>Sobre Mim</h2>
             </div>
         </div>
-        <div class="box medium" id="projetos-chatbots">
+        <div class="box medium" id="projetos-chatbots" onclick="openChatbotProjects()">
             <div class="content">
                 <h2>Projetos Chatbots</h2>
             </div>
         </div>
-        <div class="box medium" id="experiencia-profissional">
+        <div class="box medium" id="experiencia-profissional" onclick="openExperienceModal()">
             <div class="content">
                 <h2>Experiência Profissional</h2>
             </div>
         </div>
-        <div class="box medium" id="habilidades">
+        <div class="box medium" id="habilidades" onclick="openSkillsModal()">
             <div class="content">
                 <h2>Habilidades</h2>
             </div>
         </div>
-        <div class="box medium" id="experiencia-academica">
+        <div class="box medium" id="experiencia-academica" onclick="openAcadModal()">
             <div class="content">
                 <h2>Experiência Acadêmica</h2>
             </div>
@@ -50,16 +50,120 @@
         </div>
     </div>
 
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2>Contato</h2>
-            <h3>Está interessado em trabalhar comigo ou quer saber mais sobre os meus projetos?</h3>
-            <p><strong>Email:</strong> <a href="mailto:andremeliunas@gmail.com">andremeliunas@gmail.com</a></p>
-            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/andrehenriquemeliunas" target="_blank">linkedin.com/in/andrehenriquemeliunas</a></p>
-            <p><strong>GitHub:</strong> <a href="https://github.com/andremeliunas" target="_blank">github.com/andremeliunas</a></p>
+<!-- Modal de Contato -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Contato</h2>
+        <h3>Está interessado em trabalhar comigo ou quer saber mais sobre os meus projetos?</h3>
+        
+        <div class="contact-buttons">
+            <a href="mailto:andremeliunas@gmail.com" class="contact-btn email" target="_blank">📧 Email</a>
+            <a href="https://linkedin.com/in/andrehenriquemeliunas" class="contact-btn linkedin" target="_blank">🔗 LinkedIn</a>
+            <a href="https://github.com/andremeliunas" class="contact-btn github" target="_blank">💻 GitHub</a>
         </div>
     </div>
+</div>
+
+
+
+<!-- Modal de Experiência Profissional -->
+<div id="experience-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeExperienceModal()">&times;</span>
+        <h3>Minha Jornada Profissional</h3>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">💼</div>
+                <div class="timeline-content">
+                    <h4>Desenvolvedor Chatbot</h4>
+                    <p><strong>Empresa:</strong> Chat2Desk Brasil</p>
+                    <p><strong>Período:</strong> 02/2022 - 09/2024</p>
+                    <p>Desenvolvimento de chatbots personalizados, integração de APIs REST, automação de processos e suporte técnico ao cliente.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">🚀</div>
+                <div class="timeline-content">
+                    <h4>Especialista de Chatbot</h4>
+                    <p><strong>Empresa:</strong> Macro Digital Sales</p>
+                    <p><strong>Período:</strong> 09/2024 - Presente</p>
+                    <p>Desenvolvimento de chatbots personalizados Blip, integração de APIs REST, criação de fluxos interativos e manutenção de bots existentes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Experiência Acadêmica -->
+<div id="experienceAcad-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeAcadModal()">&times;</span>
+        <h3>Minha Experiência Acadêmica</h3>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-icon">🎓</div>
+                <div class="timeline-content">
+                    <h4>Análise e Desenvolvimento de Sistemas</h4>
+                    <p><strong>FACENS</strong> Faculdade de Engenharia de Sorocaba</p>
+                    <p><strong>Período:</strong> 02/2022 - 08/2024</p>
+                    <p>Aplicações WEB, Aplicativos Mobile (Android e iOS), Modelagem de Sistemas, Suporte à Área de Negócios, Geração de Informação, Criação de Aplicações sob Medida, Integração de Sistemas.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">💻</div>
+                <div class="timeline-content">
+                    <h4>Informática para Internet</h4>
+                    <p><strong>ETEC</strong> Escola Técnica Fernando Prestes</p>
+                    <p><strong>Período:</strong> 08/2020 - 11/2021</p>
+                    <p>Planejamento das ações de trabalho, documentação das aplicações, desenvolvimento e teste das aplicações para web e dispositivos móveis. Realiza a publicação, distribuição, manutenção e monitoria das aplicações para web e dispositivos móveis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Habilidades -->
+<div id="skills-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeSkillsModal()">&times;</span>
+        <h2>Habilidades</h2>
+
+        <h3>Principais Tecnologias e Ferramentas:</h3>
+        <ul class="skills-list">
+            <li>🤖 <strong>Desenvolvimento de Chatbots:</strong> Blip, Typebot</li>
+            <li>💻 <strong>Programação:</strong> JavaScript - Manipulação de dados</li>
+            <li>⚙️ <strong>Automação:</strong> n8n, APIs, Pipedream, IA</li>
+            <li>🎨 <strong>Design de Fluxos:</strong> Figma, Draw.io, Whimsical</li>
+        </ul>
+
+        <h3>Premiações:</h3>
+        <p>🏆 <strong>Líder de Categoria em Chatbots</strong><br>
+        B2B Stack - Dezembro 2022</p>
+    </div>
+</div>
+
+<!-- Modal de Sobre Mim -->
+<div id="about-modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeAboutModal()">&times;</span>
+        
+        <div class="about-header">
+            <img src="https://andremeliunas.netlify.app/img/foto-atualizada%20-%20Copia.jpg" alt="Foto de André Meliunas" class="profile-pic">
+            <h2>Sobre Mim</h2>
+        </div>
+
+        <p>
+            Sou um desenvolvedor com mais de 3 anos de experiência na criação de chatbots personalizados e integração de APIs.
+            Minha missão é transformar interações digitais em experiências simples, eficazes e envolventes.
+        </p>
+        <p>
+            Possuo expertise em plataformas como Blip, Typebot e n8n, além de um sólido conhecimento em JavaScript
+            e manipulação de payloads JSON.
+        </p>
+    </div>
+</div>
+
 
     <footer class="footer">
         <p>© 2025 André Meliunas CNPJ: 52576710000168</p>
