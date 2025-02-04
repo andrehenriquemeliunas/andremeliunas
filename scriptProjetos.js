@@ -1,11 +1,25 @@
-document.getElementById('theme-toggle').addEventListener('click', function() {
-    // Alterna a classe light-theme no body
+document.getElementById('theme-toggle').addEventListener('click', function () {
     document.body.classList.toggle('light-theme');
-    
-    // Altera o texto do botão com base no tema
+
+    // Alterando ícone e texto do botão
     if (document.body.classList.contains('light-theme')) {
-        this.textContent = 'Tema Claro';
+        this.innerHTML = "🌞";
     } else {
-        this.textContent = 'Tema Escuro';
+        this.innerHTML = "🌙";
     }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const infoIcon = document.getElementById("info-icon");
+    const tooltip = document.getElementById("tooltip");
+
+    infoIcon.addEventListener("mouseenter", function (event) {
+        tooltip.style.left = event.pageX + "px";
+        tooltip.style.top = event.pageY + 25 + "px";
+        tooltip.classList.add("show-tooltip");
+    });
+
+    infoIcon.addEventListener("mouseleave", function () {
+        tooltip.classList.remove("show-tooltip");
+    });
 });

@@ -12,6 +12,8 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+
+
 .typing {
     font-size: 40px;
     font-weight: bold;
@@ -206,18 +208,27 @@ body.light-theme .footer {
     position: absolute;
     top: 20px;
     right: 20px;
-    background-color: #111;
+    background: #333;
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 30px;
     font-size: 16px;
+    transition: 0.3s;
 }
 
-.theme-toggle.light-theme {
-    background-color: #fff;
-    color: #111;
+.theme-toggle:hover {
+    background: #555;
+}
+
+body.light-theme .theme-toggle {
+    background: #ddd;
+    color: black;
+}
+
+body.light-theme .theme-toggle:hover {
+    background: #bbb;
 }
 
 .footer {
