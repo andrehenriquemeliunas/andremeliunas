@@ -1,0 +1,47 @@
+@media (max-width: 480px) {
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .modal h2, .modal h3 {
+        font-size: 16px;
+    }
+
+    .modal p {
+        font-size: 13px;
+    }
+
+    .close {
+        font-size: 24px;
+        top: 5px;
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column; /* As divs ficam empilhadas uma embaixo da outra */
+        gap: 10px;
+        width: 100%;
+    }
+
+    .box {
+        height: auto; /* Ajuste para altura flexível nas divs em telas menores */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .typing {
+        font-size: 28px; /* Reduz o tamanho da fonte */
+        white-space: normal; /* Permite a quebra de linha */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .typing {
+        font-size: 22px; /* Ajuste para telas muito pequenas */
+    }
+}

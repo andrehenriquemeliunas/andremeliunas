@@ -12,6 +12,16 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+.typing {
+    font-size: 40px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-top: 20px;
+    overflow: hidden;
+    text-align: center;
+    max-width: 100%;
+}
+
 .header {
     text-align: center;
     margin-bottom: 40px;
@@ -49,6 +59,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: transform 0.7s ease, box-shadow 0.3s ease;
 }
 
 .box:hover {
@@ -90,14 +101,38 @@ body {
     text-align: center;
     border-radius: 15px;
     display: flex;
+    flex-direction: column; /* Permite que o ícone e o texto fiquem alinhados na coluna */
     justify-content: center;
     align-items: center;
 }
 
 #projetos-chatbots h2 {
-    margin: 0;
+    margin: 0 0 10px 0; /* Espaço abaixo do título */
     font-size: 24px;
-    transition: text-decoration 0.3s ease; /* Transição suave para o sublinhado */
+    font-weight: bold; /* Dá um destaque maior ao título */
+    transition: text-decoration 0.3s ease, color 0.3s ease; /* Transição suave para o sublinhado e cor */
+}
+
+#projetos-chatbots:hover {
+    text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
+}
+
+.icon {
+    width: 30px; /* Ajusta o tamanho do ícone */
+    height: 30px; /* Ajusta o tamanho do ícone */
+    margin-top: 10px; /* Espaço entre o texto e o ícone */
+    fill: none;
+    stroke: white; /* Cor do contorno do ícone */
+    transition: transform 0.3s ease, stroke 0.3s ease; /* Suaviza a animação do ícone */
+}
+
+#projetos-chatbots:hover .icon {
+    transform: scale(1.2); /* Aumenta o ícone quando o mouse passa por cima */
+    stroke: #9C92AC; /* Muda a cor do ícone ao passar o mouse */
+}
+
+#sobre-mim:hover{
+    text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
 }
 
 
@@ -107,12 +142,18 @@ body {
     position: relative;
     transition: background 0.3s ease;
 }
+#experiencia-profissional:hover{
+    text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
+}
 
 #habilidades {
     background: linear-gradient(135deg, #224459, #102426, #162b4e); 
     color: white;
     position: relative;
     transition: background 0.3s ease;
+}
+#habilidades:hover{
+    text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
 }
 
 #experiencia-academica {
@@ -121,12 +162,18 @@ body {
     position: relative;
     transition: background 0.3s ease;
 }
+#experiencia-academica:hover{
+    text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
+}
 
 #contato {
     background: linear-gradient(135deg, #111514, #29406C, #764B28); 
     color: white;
     position: relative;
     transition: background 0.3s ease;
+}
+#contato:hover{
+    text-decoration: underline; /* Adiciona o sublinhado ao passar o mouse */
 }
 
 /* Tema Claro */
@@ -183,48 +230,10 @@ body.light-theme .footer {
     font-size: 14px;
 }
 
-/* Media Query para telas menores */
-@media screen and (max-width: 768px) {
-    .container {
-        display: flex;
-        flex-direction: column; /* As divs ficam empilhadas uma embaixo da outra */
-        gap: 10px;
-        width: 100%;
-    }
-
-    .box {
-        height: auto; /* Ajuste para altura flexível nas divs em telas menores */
-    }
-}
-
-/* Estilo do Modal */
-.modal {
-    display: none; /* Inicialmente o modal está oculto */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.644); /* Fundo semitransparente */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.modal-content {
-    background-color: #111;
-    color: white;
-    border-radius: 10px;
-    padding: 30px;
-    max-width: 600px;
-    width: 80%;
-    margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
+/* Texto */
 .modal h3 {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-size: 18px;
 }
 
 .modal p {
@@ -232,6 +241,7 @@ body.light-theme .footer {
     font-size: 16px;
 }
 
+/* Links */
 .modal a {
     color: white;
     text-decoration: none;
@@ -239,24 +249,56 @@ body.light-theme .footer {
 }
 
 .modal a:hover {
-    text-decoration: underline; /* Sublinha o link no hover */
+    text-decoration: underline;
 }
 
 /* Botão de Fechar */
 .close {
     color: white;
-    font-size: 30px;
+    font-size: 22px;
     font-weight: bold;
-    position: absolute;
-    top: 10px;
-    right: 20px;
+    background: transparent;
+    border: none;
     cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
 }
 
-.close:hover,
-.close:focus {
-    color: #ddd;
-    text-decoration: none;
+.close:hover {
+    color: #bbb;
+}
+
+/* Estilo do Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+    background-color: #111;
+    color: white;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    position: relative; /* Necessário para o botão ficar dentro */
 }
 
 /* Tema Claro - Modal */

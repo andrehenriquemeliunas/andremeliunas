@@ -10,6 +10,26 @@ document.getElementById('theme-toggle').addEventListener('click', function() {
     }
 });
 
+const text = "Olá, sou André Meliunas";
+        const typingElement = document.getElementById("typing");
+        let index = 0;
+
+        function typeEffect() {
+            if (index < text.length) {
+                typingElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeEffect, 100); // Ajuste a velocidade aqui
+            } else {
+                setTimeout(() => {
+                    typingElement.textContent = "";
+                    index = 0;
+                    typeEffect(); // Reinicia o efeito
+                }, 2000);
+            }
+        }
+        
+        typeEffect();
+
 // Função para abrir o modal
 function openModal() {
     document.getElementById('modal').style.display = 'flex';

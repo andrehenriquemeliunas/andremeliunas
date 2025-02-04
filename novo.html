@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>André Meliunas</title>
     <link rel="stylesheet" href="stylenovo.css">
+    <link rel="stylesheet" href="mobile.css" media="(max-width: 480px)">
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -13,7 +14,7 @@
     
     <!-- Título e profissão -->
     <header class="header">
-        <h1 id="nome">André Meliunas</h1>
+        <div class="typing" id="typing"></div>
         <p id="profissao">Desenvolvedor Chatbot e Analista de Sistemas</p>
     </header>
 
@@ -25,9 +26,14 @@
         </div>
         <div class="box medium" id="projetos-chatbots" onclick="openChatbotProjects()">
             <div class="content">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+                </svg>
                 <h2>Projetos Chatbots</h2>
             </div>
         </div>
+        
+        
         <div class="box medium" id="experiencia-profissional" onclick="openExperienceModal()">
             <div class="content">
                 <h2>Experiência Profissional</h2>
@@ -71,7 +77,7 @@
 <div id="experience-modal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeExperienceModal()">&times;</span>
-        <h3>Minha Jornada Profissional</h3>
+        <h3>Minha Experiência Profissional</h3>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-icon">💼</div>
@@ -79,7 +85,7 @@
                     <h4>Desenvolvedor Chatbot</h4>
                     <p><strong>Empresa:</strong> Chat2Desk Brasil</p>
                     <p><strong>Período:</strong> 02/2022 - 09/2024</p>
-                    <p>Desenvolvimento de chatbots personalizados, integração de APIs REST, automação de processos e suporte técnico ao cliente.</p>
+                    <p style="color: rgba(255, 255, 255, 0.767);">Desenvolvimento de chatbots personalizados, integração de APIs REST, automação de processos e suporte técnico ao cliente.</p>
                 </div>
             </div>
             <div class="timeline-item">
@@ -88,7 +94,7 @@
                     <h4>Especialista de Chatbot</h4>
                     <p><strong>Empresa:</strong> Macro Digital Sales</p>
                     <p><strong>Período:</strong> 09/2024 - Presente</p>
-                    <p>Desenvolvimento de chatbots personalizados Blip, integração de APIs REST, criação de fluxos interativos e manutenção de bots existentes.</p>
+                    <p style="color: rgba(255, 255, 255, 0.767);">Desenvolvimento de chatbots personalizados Blip, integração de APIs REST, criação de fluxos interativos e manutenção de bots existentes.</p>
                 </div>
             </div>
         </div>
@@ -107,7 +113,7 @@
                     <h4>Análise e Desenvolvimento de Sistemas</h4>
                     <p><strong>FACENS</strong> Faculdade de Engenharia de Sorocaba</p>
                     <p><strong>Período:</strong> 02/2022 - 08/2024</p>
-                    <p>Aplicações WEB, Aplicativos Mobile (Android e iOS), Modelagem de Sistemas, Suporte à Área de Negócios, Geração de Informação, Criação de Aplicações sob Medida, Integração de Sistemas.</p>
+                    <p style="color: rgba(255, 255, 255, 0.767);">Aplicações WEB, Aplicativos Mobile (Android e iOS), Modelagem de Sistemas, Suporte à Área de Negócios, Geração de Informação, Criação de Aplicações sob Medida, Integração de Sistemas.</p>
                 </div>
             </div>
             <div class="timeline-item">
@@ -116,7 +122,7 @@
                     <h4>Informática para Internet</h4>
                     <p><strong>ETEC</strong> Escola Técnica Fernando Prestes</p>
                     <p><strong>Período:</strong> 08/2020 - 11/2021</p>
-                    <p>Planejamento das ações de trabalho, documentação das aplicações, desenvolvimento e teste das aplicações para web e dispositivos móveis. Realiza a publicação, distribuição, manutenção e monitoria das aplicações para web e dispositivos móveis.</p>
+                    <p style="color: rgba(255, 255, 255, 0.767);">Planejamento das ações de trabalho, documentação das aplicações, desenvolvimento e teste das aplicações para web e dispositivos móveis. Realiza a publicação, distribuição, manutenção e monitoria das aplicações para web e dispositivos móveis.</p>
                 </div>
             </div>
         </div>
